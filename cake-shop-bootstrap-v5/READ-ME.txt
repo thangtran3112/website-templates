@@ -1,7 +1,6 @@
-  # Bootstrap v4 template
-  =>  Template Name    : iCREAM - Ice Cream Shop Website Template
+  =>  Template Name    : CakeZone - Cake Shop Website Template
 
-  =>  Template Link    : https://htmlcodex.com/ice-cream-shop-website-template
+  =>  Template Link    : https://htmlcodex.com/cake-shop-website-template
 
   =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
 
