@@ -1,0 +1,109 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-quote
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Testimonials'
+
+block page  
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Quote Modern
+	section.section.section-xxl.bg-default
+		.container
+			h3.fw-regular #1
+			.row.row-lg.row-30.justify-content-center
+				.col-sm-6
+					+quote-modern({
+						img: 'user-5-62x62',
+						author: 'James Peterson',
+						status: 'Client',
+						text: 'Pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Mauris a diam maecenas sed enim ut sem viverra aliquet.'
+					})
+
+				.col-sm-6
+					+quote-modern({
+						img: 'user-6-62x62',
+						author: 'Ann McMillan',
+						status: 'Client',
+						text: 'Lectus proin nibh nisl condimentum id venenatis a condimentum. Sed id semper risus in hendrerit. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices libero id faucibus. '
+					})
+
+	='\n'
+
+	// Quote Minimal
+	section.section.section-xxl.bg-image-1
+		.container
+			h3.fw-regular #2
+			.row.row-30.justify-content-center: .col-xl-9
+				.slick-quote
+					// Slick Carousel
+					#carousel-parent-3.slick-slider.carousel-parent( data-autoplay='true', data-swipe='true' data-items='1' data-child='#child-carousel-3', data-for='#child-carousel-3' )
+						.item: p.quote-minimal-text Cur galatae congregabo? Eheu, luba! Victrixs credere in gandavum! Primus sectam virtualiter perderes pulchritudine est. Cum tumultumque manducare, omnes fermiumes.
+						.item: p.quote-minimal-text Peritus voxs ducunt ad gluten. Deuss sunt demolitiones de bi-color caesium. Mensa de raptus clinias, carpseris extum! Demolitiones sunt seculas de barbatus sensorem.
+						.item: p.quote-minimal-text Historia pius poeta est. Cobaltums crescere! Xiphias neuter armarium est. Idoleum de azureus humani generis, resuscitabo xiphias! Varius eleates semper imitaris accola.
+					.slick-quote-nav
+						#child-carousel-3.slick-slider.child-carousel( data-arrows='true' data-for='#carousel-parent-3' data-items='1' data-sm-items='1' data-md-items='3' data-lg-items='3' data-xl-items='3' data-xxl-items='3' )
+							.item
+								.quote-minimal-figure: +jpg('user-7-87x87')
+								.quote-minimal-author Patrick Goodman
+								.quote-minimal-status Client
+							.item
+								.quote-minimal-figure: +jpg('user-8-87x87')
+								.quote-minimal-author Kate Smith
+								.quote-minimal-status Client
+							.item
+								.quote-minimal-figure: +jpg('user-9-87x87')
+								.quote-minimal-author Sam Wilson
+								.quote-minimal-status Client
+	='\n'
+
+	// Quote Creative
+	section.section.section-xxl.bg-default
+		.container
+			h3.fw-regular #3
+			.row.row-lg.row-30.justify-content-center
+				.col-sm-6.col-lg-4
+					+quote-creative({
+						img: 'user-6-62x62',
+						author: 'Lisa Smith',
+						text: 'Cum exsul crescere, omnes plasmatores visum fatalis'
+					})
+
+				.col-sm-6.col-lg-4
+					+quote-creative({
+						img: 'user-10-62x62',
+						author: 'Mark Wilson',
+						text: 'Varius coordinatae interdum promissios vox est.'
+					})
+
+				.col-sm-6.col-lg-4
+					+quote-creative({
+						img: 'user-11-62x62',
+						author: 'Jane Peterson',
+						text: 'Sunt adelphises contactus fatalis, azureus.'
+					})
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

@@ -1,0 +1,36 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-thumbnail
+include ../sections/_header-modern
+include ../sections/_footer-modern
+block variables
+	- var activeCategory = 'gallery'
+	- var pageName = 'Masonry Gallery'
+
+block page  
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Masonry Gallery
+	section.section.section-xl.bg-default
+		.container
+			include ../includes/_masonry-gallery
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

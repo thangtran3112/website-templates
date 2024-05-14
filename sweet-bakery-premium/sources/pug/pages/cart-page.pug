@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+block variables
+	- var activeCategory = 'shop'
+	- var pageName = 'Cart Page'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Shopping Cart
+	section.section.section-xl.bg-default
+		.container
+			// shopping-cart
+			include ../includes/_shopping-cart
+			.group-xl.group-justify.justify-content-center.justify-content-md-between
+				div: form.rd-form.rd-mailform.rd-form-inline.rd-form-coupon
+					.form-wrap
+						input.form-input.form-input-inverse(id="coupon-code" type="text" name="text")
+						label.form-label(for="coupon-code") Coupon code
+					.form-button: button.button.button-lg.button-secondary.button-zakaria(type="submit") Apply
+				div: .group-xl.group-middle
+					div: .group-md.group-middle
+						.heading-5.fw-medium.text-gray-500 Total
+						.heading-3.fw-normal $48
+					a.button.button-lg.button-primary.button-zakaria(href='checkout.html') Proceed to checkout
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

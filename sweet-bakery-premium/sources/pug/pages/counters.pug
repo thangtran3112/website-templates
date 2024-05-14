@@ -1,0 +1,82 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-counters
+include ../sections/_header-modern
+include ../sections/_footer-modern
+block variables
+	- var activeCategory = 'elements'
+	- var pageName = 'Counters'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Counter Classic
+	section.section.section-xl.bg-default
+		.container
+			.row.row-30.justify-content-center.bordered-1
+				.col-sm-4.position-relative
+					+counter-classic({
+						number: '500',
+						title: 'Types of Cakes<br class="d-none d-sm-block"> and sweets'
+					})
+				.col-sm-4.position-relative
+					+counter-classic({
+						number: '245',
+						title: 'Satisfied<br class="d-none d-sm-block"> Customers'
+					})
+				.col-sm-4.position-relative
+					+counter-classic({
+						number: '22',
+						title: 'qualified <br class="d-none d-sm-block"> Bakers'
+					})
+	='\n'
+
+	// Counter Modern
+	+parallax({
+		bgImage: 'parallax-bg-2',
+		innerClass: 'section-xxl context-light'
+	})
+		.container: .row.row-30.justify-content-center
+			.col-6.col-sm-3
+				+counter-modern({
+					number: '245',
+					title: 'Satisfied <br class="d-none d-sm-block"> Customers'
+				})
+			.col-6.col-sm-3
+				+counter-modern({
+					number: '22',
+					title: 'Qualified <br class="d-none d-sm-block"> Staff'
+				})
+			.col-6.col-sm-3
+				+counter-modern({
+					number: '8',
+					title: 'International <br class="d-none d-sm-block">Awards'
+				})
+			.col-6.col-sm-3
+				+counter-modern({
+					number: '2',
+					title: 'Baked<br class="d-none d-sm-block"> Cakes',
+					symbol: 'k'
+				})
+
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

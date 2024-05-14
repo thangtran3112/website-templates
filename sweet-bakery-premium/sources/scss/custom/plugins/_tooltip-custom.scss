@@ -1,0 +1,24 @@
+/*
+*
+* Tooltop Custom
+*/
+
+//
+// Base class
+//
+.tooltip {
+	font-size: $font-size-body;
+	line-height: $line-height-base;
+	.arrow{
+		&:before{
+			border-top-color: $primary;
+		}
+	}
+	.tooltip-inner{
+		background-color: $primary;
+	}
+}
+
+.tooltip-inner {
+	border-radius: 0;
+}

@@ -1,0 +1,115 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-team
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Our Team'
+
+block page  
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Team Classic
+	section.section.section-sm.section-first.bg-default
+		.container
+			h3.fw-regular #1
+			.row.row-lg.row-30.justify-content-center
+				.col-sm-6.col-md-4
+					+team-classic({
+						mod: 'box-md',
+						img: 'team-1-370x334',
+						name: 'RICHARD SMITH',
+						text: 'Sociis natoque penatibus et magnis. Lectus nulla at volutpat diam ut.'
+					})
+				.col-sm-6.col-md-4
+					+team-classic({
+						mod: 'box-md',
+						img: 'team-2-370x334',
+						name: 'SUSAN ANDERSON',
+						text: 'Lacus viverra vitae congue eu consequat ac felis  platea dictumst.'
+					})
+				.col-sm-6.col-md-4
+					+team-classic({
+						mod: 'box-md',
+						img: 'team-3-370x334',
+						name: 'STEVE RUFFALO',
+						text: 'Sed faucibus turpis in eu mi. Ut pharetra sit amet aliquam maecenas.'
+					})
+	// Team Modern
+	section.section.section-sm.section-last.bg-default
+		.container
+			h3.fw-regular #2
+			.row.row-lg.row-30.justify-content-center
+				.col-sm-6.col-md-5.col-lg-3
+					+team-modern({
+						mod: 'box-sm',
+						img: 'team-4-269x277',
+						name: 'Caroline Lopez',
+						text: 'Vulputate dignissim suspendisse in est ante in nibh mauris.'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+team-modern({
+						mod: 'box-sm',
+						img: 'team-5-269x277',
+						name: 'Sam Williams',
+						text: 'Pellentesque pulvinar pellentesque habitant morbi tristique.'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+team-modern({
+						mod: 'box-sm',
+						img: 'team-6-269x277',
+						name: 'Rebecca Martinez',
+						text: 'Lacinia at quis risus sed vulputate odio ut enim blandit.'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+team-modern({
+						mod: 'box-sm',
+						img: 'team-7-269x277',
+						name: 'Peter Smith',
+						text: 'Sit amet aliquam id diam maecenas ultricies egestas egestas.'
+					})
+	// Team Creative
+	section.section.section-xxl.bg-image-1
+		.container
+			h3.fw-regular #3
+			.row.row-lg.row-30.justify-content-center
+				.col-sm-6.col-lg-4
+					+team-creative({
+						img: 'team-1-249x249',
+						name: 'RICHARD SMITH',
+						text: 'Maecenas ultricies mi eget mauris pharetra et ultrices neque. Ut aliquam purus sit amet luctus venenatis lectus.'
+					})
+				.col-sm-6.col-lg-4
+					+team-creative({
+						img: 'team-2-249x249',
+						name: 'SUSAN ANDERSON',
+						text: 'Malesuada proin libero nunc consequat interdum varius sit amet. Enim blandit volutpat maecenas volutpat blandit.'
+					})
+				.col-sm-6.col-lg-4
+					+team-creative({
+						img: 'team-3-249x249',
+						name: 'STEVE RUFFALO',
+						text: 'A iaculis at erat pellentesque adipiscing. Viverra adipiscing at in tellus integer feugiat scelerisque varius.'
+					})
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

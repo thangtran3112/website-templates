@@ -1,0 +1,69 @@
+extends  ../_skeleton
+
+
+//- Includes
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+
+block variables
+	- var activeCategory = 'elements'
+	- var pageName = 'Buttons'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Button Sizes
+	section.section.section-sm.section-first.bg-default.text-md-start
+		.container
+			h3 Button Sizes
+			.group-xs.group-middle
+				.button.button-lg.button-secondary.button-zakaria Large size
+				.button.button-secondary.button-zakaria Medium size
+				.button.button-sm.button-secondary.button-zakaria Small size
+	='\n'
+
+	// Buttons with Icons
+	section.section.section-sm.bg-default.text-md-start
+		.container
+			h3 Buttons with Icons
+			.group-xs.group-middle
+				.button.button-lg.button-icon.button-icon-left.button-primary.button-zakaria
+					span.icon.mdi.mdi-arrow-right
+					| Read more
+				.button.button-lg.button-icon.button-icon-left.button-default-outline.button-zakaria
+					span.icon.mdi.mdi-arrow-right
+					| Read more
+	='\n'
+
+	// Buttons with Shadow
+	section.section.section-sm.section-last.bg-default.text-md-start
+		.container
+			h3 Buttons with Shadows
+			.group-xs.group-middle
+				.button.button-lg.button-icon.button-icon-left.button-shadow.button-primary.button-zakaria
+					span.icon.mdi.mdi-arrow-right
+					| Read more
+				.button.button-lg.button-icon.button-icon-left.button-shadow.button-default-outline.button-zakaria
+					span.icon.mdi.mdi-arrow-right
+					| Read more
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

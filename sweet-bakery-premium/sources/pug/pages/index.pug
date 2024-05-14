@@ -1,0 +1,342 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_header-modern
+include ../components/_ui-product
+include ../components/_ui-box-icon
+include ../svg-icons/_ui-svg-icons
+include ../components/_ui-team
+include ../components/_ui-quote
+include ../components/_ui-posts
+include ../sections/_footer-modern
+
+block variables
+	-
+		var
+		activeCategory = 'home',
+		pageName = 'Home'
+
+
+
+block page
+	// Page Header
+	+header-modern
+
+	// Intro
+	section.section.section-custom-1.bg-img-1.section-intro
+		.container
+			.row
+				.col-md-7.col-xl-5.text-start.position-relative
+					.text-big.text-decorative.text-primary.wow.fadeInLeft Delicious
+					h3.wow.fadeInLeft.fw-bold.text-decor-line.text-spacing-200(data-wow-delay=".2s") cakes for you
+					h4.wow.fadeInLeft.text-spacing-100.text-transform-none.text-gray-600.fw-normal.text-gray-600(data-wow-delay=".3s")
+						span.d-xl-block Sweet Bakery offers the best
+						span.d-xl-block cakes and sweets for you.
+					a.button.button-lg.button-shadow-2.button-primary.button-zakaria.wow.fadeInUp( href=links.shop ) Shop now
+
+	// Promo
+	section.section.section-sm.bg-default.pt-xl-0
+		.container
+			article.promo-classic.offset-negative-1
+				.promo-classic-title Only Fresh Cakes
+				p.big.promo-classic-text All of our products are made from scratch using family recipes with only the highest quality ingredients.  We bake and sell fresh daily to ensure only the best products are sold to our customers.
+				a.button.button-sm.button-icon-3.button-primary.button-zakaria( href=links.shop ): span.mdi.mdi-arrow-right
+
+
+	// About Us
+	section.section.section-sm.section-last.bg-default
+		.container
+			h2.wow.fadeScale What We offer
+			// Owl Carousel
+			.owl-carousel.owl-style-8( data-items='1' data-sm-items='2' data-lg-items='3' data-margin='30' data-dots='true' data-mouse-drag='false' )
+				article.box-info-modern.wow.slideInUp( data-wow-delay='.1s' )
+					a.box-info-modern-figure( href="#" ): +jpg('offer-1-340x243')
+					h4.box-info-modern-title: a( href="#" ) Party Cupcakes
+					.box-info-modern-text We provide a variety of cupcakes for any party made with high-quality natural ingredients and no preservatives.
+					a.box-info-modern-link( href="#" ) Read more
+
+				article.box-info-modern.wow.slideInUp
+					a.box-info-modern-figure( href="#" ): +jpg('offer-2-340x243')
+					h4.box-info-modern-title: a( href="#" ) Choco cakes
+					.box-info-modern-text Nothing tastes better than a chocolate cake with a variety of flavors, which is always available at our bakery.
+					a.box-info-modern-link( href="#" ) Read more
+
+				article.box-info-modern.wow.slideInUp( data-wow-delay='.1s' )
+					a.box-info-modern-figure( href="#" ): +jpg('offer-3-340x243')
+					h4.box-info-modern-title: a( href="#" ) Wedding cakes
+					.box-info-modern-text Want to make your wedding unforgettable? Then you need to order a unique wedding cake at Sweet Bakery!
+					a.box-info-modern-link( href="#" ) Read more
+
+	// New products
+	section.section.section-xxl.bg-image-1
+		.container
+			h2.wow.fadeScale New products
+			// Owl Carousel
+			.owl-carousel.owl-style-9( data-items='1' data-sm-items='2' data-md-items='3' data-lg-items='4' data-margin='30' data-dots='true' data-autoplay='false' )
+				+product({
+					img: 'product-1-152x160',
+					title: 'Chocolate Truffles',
+					price: '23',
+					priceOld: '30',
+					sale: true
+				})
+				+product({
+					img: 'product-2-157x127',
+					title: 'Chocolate Pudding',
+					price: '25'
+
+				})
+				+product({
+					img: 'product-3-179x114',
+					title: 'Dark Chocolate Cake',
+					price: '15',
+					new: true
+				})
+				+product({
+					img: 'product-4-215x112',
+					title: 'Chocolate Cookies',
+					price: '12'
+				})
+				+product({
+					img: 'product-1-152x160',
+					title: 'Chocolate Truffles',
+					price: '23',
+					priceOld: '30',
+					sale: true
+				})
+				+product({
+					img: 'product-2-157x127',
+					title: 'Chocolate Pudding',
+					price: '25'
+
+				})
+				+product({
+					img: 'product-3-179x114',
+					title: 'Dark Chocolate Cake',
+					price: '15',
+					new: true
+				})
+				+product({
+					img: 'product-4-215x112',
+					title: 'Chocolate Cookies',
+					price: '12'
+				})
+	// Services
+	section.section.section-xxl.bg-default
+		.container
+			h2.pb-xl-0.wow.fadeScale Why choose us
+			.row.row-xxl-2.row-30.row-md-40.row-lg-50.align-items-center
+				.col-md-5.col-xl-4: .row.row-30.row-md-40.row-lg-50.bordered-2
+					.col-sm-6.col-md-12
+						+box-icon-nancy({
+							mod: 'box-icon-nancy-right text-center text-lg-end',
+							double: true,
+							icon: 'linearicons-cake',
+							unit: 'unit-spacing-sm flex-column flex-lg-row-reverse',
+							title: 'Quality Products',
+							text: 'We guarantee the quality of all the  cakes we provide as they are baked using the freshest ingredients.'
+						}).wow.fadeInLeft
+					.col-sm-6.col-md-12
+						+box-icon-nancy({
+							mod: 'box-icon-nancy-right text-center text-lg-end',
+							double: true,
+							icon: 'linearicons-truck',
+							unit: 'unit-spacing-sm flex-column flex-lg-row-reverse',
+							title: 'free delivery',
+							text: 'All orders submitted by our US clients are delivered for free throughout the United States.'
+						}).wow.fadeInLeft( data-wow-delay='.1s' )
+				.col-md-2.col-xl-4.d-none.d-md-block.wow.fadeScale: +jpg('index-1-377x212')
+				.col-md-5.col-xl-4: .row.row-30.row-md-40.row-lg-50.bordered-2
+					.col-sm-6.col-md-12
+						+box-icon-nancy({
+							mod: 'box-icon-nancy-left text-center text-lg-start',
+							double: true,
+							icon: 'linearicons-lotus',
+							unit: 'unit-spacing-sm flex-column flex-lg-row',
+							title: 'catering service',
+							text: 'Our bakery also provides an outstanding catering service for events and special occasions.'
+						}).wow.fadeInRigth
+							+svg-icon-6
+					.col-sm-6.col-md-12
+						+box-icon-nancy({
+							mod: 'box-icon-nancy-left text-center text-lg-start',
+							double: true,
+							icon: 'linearicons-credit-card',
+							unit: 'unit-spacing-sm flex-column flex-lg-row',
+							title: 'Online payment',
+							text: 'We accept all kinds of online payments including Visa, MasterCard, American Express credit cards.'
+						}).wow.fadeInRight( data-wow-delay='.1s' )
+
+	// CTA
+	+parallax({
+		bgImage: 'parallax-bg-1',
+		innerClass: 'section-xxl context-light text-md-start bg-overlay-1'
+	})
+		.container.box-cta
+			h2.wow.fadeInRight.pb-xl-0 Summer sale
+			.group-md-2.group-middle.wow.fadeInRight( data-wow-delay='.1s' )
+				span.text-lg.title-style-6 -20%
+				span.heading-4.fw-sbold on all Cakes
+			p.text-width-medium.wow.fadeInRight( data-wow-delay='.2s' ) Purchase our tasty cakes and sweets for your next event or family dinner at our online shop and save more money than anywhere.
+			a.button.button-lg.button-shadow-2.button-secondary.button-zakaria.wow.fadeInUp( href=links.shop ) Shop now
+	='\n'
+
+	// About Us
+	section.section.section-xxl.bg-default
+		.container
+			h2.wow.fadeScale About us
+			.row.row-30.row-lg.justify-content-center
+				.col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft: +jpg('about-570x511')
+				.col-md-10.col-lg-6.wow.fadeInRight
+					// Bootstrap tabs
+					#tabs-1.tabs-custom.tabs-jean
+						// Tab panes
+						.tab-content
+							div#tabs-1-1.tab-pane.fade.show.active
+								.box-info-creative
+									h4.box-info-creative-title: a( href='#' ) providing quality baked goods for all customers
+									.box-info-creative-text Our mission is to create a bakery that makes the best quality baked goods on site from scratch, and where both employees and customers would feel comfortable.
+									a.link-classic.box-info-creative-link( href='#' ) Read more
+							div#tabs-1-2.tab-pane.fade
+								.box-info-creative
+									h4.box-info-creative-title: a( href='#' ) Ensuring the Best Atmosphere for Everyone
+									.box-info-creative-text We see the most important part of our business in ensuring the happiness of our staff and the satisfaction of our clients by creating a welcoming and caring atmosphere.
+									a.link-classic.box-info-creative-link( href='#' ) Read more
+							div#tabs-1-3.tab-pane.fade
+								.box-info-creative
+									h4.box-info-creative-title: a( href='#' ) Serving only the freshest baked goods for you
+									.box-info-creative-text We aim to deliver the best baked goods for corporate events and individual celebrations, while also offering the best level of customer service in the United States.
+									a.link-classic.box-info-creative-link( href='#' ) Read more
+						// Nav tabs
+						.nav-tabs-wrap: ul.nav.nav-tabs
+							li.nav-item(role='presentation'): a.nav-link.active(href='#tabs-1-1' data-bs-toggle='tab') Our mission
+							li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-2' data-bs-toggle='tab') Our Values
+							li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-3' data-bs-toggle='tab') Our goals
+
+	='\n'
+
+	// Out Team
+	section.section.section-xxl.bg-image-1
+		.container
+			h2.wow.fadeScale Our team
+			// Owl Carousel
+			.owl-carousel.owl-style-10( data-items='1' data-sm-items='2' data-lg-items='3' data-margin='30' data-dots='true' data-mouse-drag='false' )
+				+team-creative({
+					img: 'team-1-249x249',
+					name: 'richard smith',
+					text: 'Richard has a true passion for baking and that’s why he has been our founder and head baker since day one.'
+				}).wow.slideInUp( data-wow-delay='.1s' )
+				+team-creative({
+					img: 'team-2-249x249',
+					name: 'Susan Anderson',
+					text: 'Susan spends most of her time baking and cake decorating as well as heading up the bakery\'s marketing initiatives.'
+				}).wow.slideInUp
+				+team-creative({
+					img: 'team-3-249x249',
+					name: 'Steve Ruffalo',
+					text: 'Steve is our lead cake designer.  He has designed beautiful cakes for various occasions including weddings, parties, showers, anniversaries and more.'
+				}).wow.slideInUp( data-wow-delay='.1s' )
+	='\n'
+
+	// CTA 2
+	section.section.section-xxl.section-inset-1.bg-image(style='background-image: url(images/bg-cta-1.jpg);')
+		.container.box-cta
+			h3.fw-normal.text-transform-none.wow.fadeInDown.text-decorative.text-primary.text-spacing-75 Unique Flavors and Fresh Ingredients
+			h2.text-spacing-75.text-black-800.wow.fadeScale All Kinds of Cakes
+			a.button.button-lg.button-primary.button-zakaria.wow.fadeInUp( href='#' ) Read More
+	='\n'
+
+	// Out Clients
+	section.section.section-xxl.bg-default
+		.container
+			h2.wow.fadeScale Testimonials
+			// Owl Carousel
+			.owl-carousel.owl-style-11( data-items='1' data-sm-items='1' data-md-items='1' data-lg-items='2'  data-xl-items='2' data-xxl-items='2' data-margin='30' data-dots='true' data-autoplay='false' )
+				+quote-carly({
+					mod: 'quote-carly-1',
+					text: 'Thank you so much for the elegant cupcakes. They looked and tasted amazing. I’m recommending you to all my friends.',
+					img: 'user-10-62x62',
+					author: 'Patrick Goodman',
+					status: 'Client'
+				})
+				+quote-carly({
+					mod: 'quote-carly-1',
+					text: 'Just a note to let you know how fabulous your wedding cake was. Many guests commented on how delicious it tasted.',
+					img: 'user-11-62x62',
+					author: 'Jane Smith',
+					status: 'Client'
+				})
+				+quote-carly({
+					mod: 'quote-carly-1',
+					text: 'If you are looking for the mouth deliciousness, then you should definitely try the goods from the Sweet Bakery.',
+					img: 'user-5-62x62',
+					author: 'Sam Wilson',
+					status: 'Client'
+				})
+				+quote-carly({
+					mod: 'quote-carly-1',
+					text: 'This bakery was great to work with and I will be using them for my future events. Their cupcakes tasted absolutely delightful.',
+					img: 'user-6-62x62',
+					author: 'Jane Peterson',
+					status: 'Client'
+				})
+	='\n'
+
+	// Latest News
+	section.section.section-xxl.bg-image-1
+		.container
+			h2.wow.fadeScale Latest News
+			.row.row-lg.row-30.justify-content-center
+				.col-sm-8.col-md-6.wow.fadeInLeft
+					+post-nikki-2({
+						img: 'post-1-570x461',
+						time: {
+							datetime: '2023-09-08',
+							dateText: 'August 9, 2023'
+						},
+						title: 'How to Pipe a Fluffy Frosting Border on a Cake'
+					})
+				.col-md-6: .row.row-30
+					.col-6.col-md-12.wow.fadeInRight
+						+post-nikki({
+							unit: 'flex-column flex-md-row align-items-center',
+							img: 'post-2-270x215',
+							time: {
+								datetime: '2023-09-08',
+								dateText: 'August 9, 2023'
+							},
+							title: 'Recipe of the Day: Pumpkin Spice Latte Cake'
+						})
+					.col-6.col-md-12.wow.fadeInRight
+						+post-nikki({
+							unit: 'flex-column flex-md-row align-items-center',
+							img: 'post-3-270x215',
+							time: {
+								datetime: '2023-09-08',
+								dateText: 'August 9, 2023'
+							},
+							title: 'Top 5 Tips for Successful Cake Baking'
+						})
+
+
+	// Section Clients
+	section.section.section-xl.bg-img-2
+		.container
+			.owl-carousel.owl-style-2( data-items='2' data-sm-items='3' data-md-items='4' data-lg-items='5' data-margin='30' data-dots='true' )
+				a.clients-classic( href='#' ): +png('clients-1-120x112')
+				a.clients-classic( href='#' ): +png('clients-2-105x118')
+				a.clients-classic( href='#' ): +png('clients-3-111x98')
+				a.clients-classic( href='#' ): +png('clients-4-122x92')
+				a.clients-classic( href='#' ): +png('clients-5-111x111')
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})
