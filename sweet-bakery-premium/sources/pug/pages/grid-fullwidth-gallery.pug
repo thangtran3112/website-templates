@@ -1,0 +1,112 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-thumbnail
+include ../sections/_header-modern
+include ../sections/_footer-modern
+block variables
+	- var activeCategory = 'gallery'
+	- var pageName = 'Grid Fullwidth Gallery'
+
+block page  
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Grid Gallery
+	section.section.section-xl.bg-default
+		.container-fluid.isotope-wrap.isotope-custom-2
+			.isotope-filters
+				//- Isotope Filters
+				button.isotope-filters-toggle.button.button-sm.button-icon.button-icon-right.button-default-outline(data-custom-toggle='.isotope-filters-list', data-custom-toggle-hide-on-blur='true')
+					span.icon.mdi.mdi-chevron-down
+					| Filter
+
+				.isotope-filters-list-wrap
+					ul.isotope-filters-list
+						li: a.active(href='#', data-isotope-filter='*') all Categories
+						li: a(href='#', data-isotope-filter='Type 1') Cakes
+						li: a(href='#', data-isotope-filter='Type 2') Cupcakes
+
+			.row.row-30.isotope( data-lightgallery='group' )
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 1')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-1-480x339',
+						imgOriginal: 'grid-gallery-1-original',
+						title: 'Sponge Cake',
+						tag: 'Cakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 1')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-2-480x339',
+						imgOriginal: 'grid-gallery-2-original',
+						title: 'Angel Food Cake',
+						tag: 'Cakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 2')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-3-480x339',
+						imgOriginal: 'grid-gallery-3-original',
+						title: 'Strawberry Cupcake',
+						tag: 'Cupcakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 2')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-4-480x339',
+						imgOriginal: 'grid-gallery-4-original',
+						title: 'Lemon Cupcake',
+						tag: 'Cupcakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 1')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-5-480x339',
+						imgOriginal: 'grid-gallery-7-original',
+						title: 'Genoise Cake',
+						tag: 'Cakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 2')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-6-480x339',
+						imgOriginal: 'grid-gallery-8-original',
+						title: 'Champagne Cupcake',
+						tag: 'Cupcakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 2')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-7-480x339',
+						imgOriginal: 'grid-gallery-5-original',
+						title: 'Caramel Cupcake',
+						tag: 'Cupcakes'
+					})
+
+				.col-sm-6.col-md-4.col-xl-3.isotope-item(data-filter='Type 1')
+					+thumbnail-classic({
+						img: 'grid-fullwidth-gallery-8-480x339',
+						imgOriginal: 'grid-gallery-9-original',
+						title: 'Butter Cake',
+						tag: 'Cakes'
+					})
+				.col-1
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

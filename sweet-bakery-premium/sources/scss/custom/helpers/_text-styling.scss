@@ -1,0 +1,128 @@
+/*
+* Text styling
+*/
+
+// Text styles
+.text-italic {
+	font-style: italic;
+}
+
+.text-normal {
+	font-style: normal;
+}
+
+// Text decoration
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-strike {
+	text-decoration: line-through;
+}
+
+// Text weight
+.fw-thin {
+	font-weight: 100;
+}
+
+.fw-light {
+	font-weight: 300;
+}
+
+.fw-regular {
+	font-weight: 400;
+}
+
+.fw-medium {
+	font-weight: 500;
+}
+
+.fw-sbold {
+	font-weight: 600;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+.fw-ubold {
+	font-weight: 900;
+}
+
+// Text spacing
+.text-spacing-0 { letter-spacing: 0; }
+.text-spacing-20 { letter-spacing: .02em; }
+.text-spacing-25 { letter-spacing: .025em; }
+.text-spacing-50 { letter-spacing: .05em; }
+.text-spacing-75 { letter-spacing: .075em; }
+.text-spacing-100 { letter-spacing: .1em; }
+.text-spacing-150 { letter-spacing: .15em; }
+.text-spacing-200 { letter-spacing: .20em; }
+
+// Text width
+.text-width-medium { max-width: 500px; }
+.text-width-large { max-width: 600px; }
+
+.text-center [class*='text-width-'] {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.text-primary {
+	color: $primary !important;
+}
+
+.text-gray-500 { color: $gray-500; }
+
+.text-transform-none { text-transform: none; }
+.text-transform-uppercase { text-transform: uppercase; }
+.text-transform-capitalize { text-transform: capitalize; }
+
+.font-family-sans-serif { font-family: $font-family-sans-serif; }
+.font-family-sans-serif-1 { font-family: $font-family-sans-serif-1; }
+.font-family-cursive { font-family: $font-family-cursive; }
+.text-gray-600{
+	color: $gray-600;
+}
+.text-decor-line{
+	position: relative;
+	@include media-breakpoint-up(xl) {
+		padding-left: 85px;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 60px;
+			height: 2px;
+			background-color: #151515;
+		}
+	}
+}
+
+.text-lg{
+	font-size: 48px;
+	line-height: 1;
+}
+
+.text-black-800{
+	color: $gray-800;
+}
+
+.text-decorative{
+	font-family: $font-decorative;
+}
+.text-big{
+	font-size: 50px;
+	@include media-breakpoint-up(md) {
+		font-size: 70px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 80px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 100px;
+		line-height: 1.1;
+	}
+}

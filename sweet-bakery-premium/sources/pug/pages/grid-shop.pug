@@ -1,0 +1,113 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-product
+include ../components/_ui-pagination
+include ../sections/_header-modern
+include ../sections/_footer-modern
+block variables
+	- var activeCategory = 'shop'
+	- var pageName = 'Grid Shop'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Section Shop
+	section.section.section-xxl.bg-default.text-md-start
+		.container: .row.row-50
+			.col-lg-4.col-xl-3: include ../includes/_aside-product
+			.col-lg-8.col-xl-9
+				.product-top-panel.group-md
+					p.product-top-panel-title Showing 1–9 of 28 results
+					div: .group-sm.group-middle
+						.product-top-panel-sorting
+							select(data-minimum-results-for-search="Infinity")
+								option(value="1") Sort by newness
+								option(value="2") Sort by popularity
+								option(value="3") Sort by alphabet
+
+						.product-view-toggle
+							a.mdi.mdi-apps.product-view-link.product-view-grid.active(href=links.shop)
+							a.mdi.mdi-format-list-bulleted.product-view-link.product-view-list(href='shop-list.html')
+
+				.row.row-30.row-lg-50
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-5-187x155',
+							title: 'Fairytale Brownies',
+							price: '23',
+							priceOld: '30'
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-6-140x137',
+							title: 'Chocolate Biscuits',
+							price: '13',
+							new: true
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-8-128x126',
+							title: 'Soft Biscuits',
+							price: '17'
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-9-141x129',
+							title: 'Drop Biscuits',
+							price: '11',
+							new: true
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-10-144x146',
+							title: 'Vegan Cookies',
+							price: '15'
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-1-152x160',
+							title: 'Chocolate Truffles',
+							price: '23',
+							priceOld: '32'
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-2-157x127',
+							title: 'Chocolate Pudding',
+							price: '25',
+							new: true
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-3-179x114',
+							title: 'Dark Chocolate Cake',
+							price: '15'
+						})
+					.col-sm-6.col-md-4.col-lg-6.col-xl-4
+						+product({
+							img: 'product-4-215x112',
+							title: 'Chocolate Cookies',
+							price: '18'
+						})
+				.pagination-wrap: +pagination-bootstrap(null, 1, 3)
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

@@ -1,0 +1,128 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-icon
+include ../svg-icons/_ui-svg-icons
+include ../sections/_header-modern
+include ../sections/_footer-modern
+block variables
+	- var activeCategory = 'elements'
+	- var pageName = 'Icon Lists'
+
+block page  
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Icons 1
+	section.section.section-sm.section-first.bg-default
+		.container
+			h2.fw-regular #1
+			.row.row-30.box-ordered
+				.col-sm-6.col-lg-3
+					+box-icon-modern({
+						title: 'Sponge Cake',
+						icon: 'linearicons-candy'
+					})
+						+svg-icon-1
+				.col-sm-6.col-lg-3
+					+box-icon-modern({
+						title: 'Angel Food Cake',
+						icon: 'linearicons-ice-cream2',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut'
+					})
+						+svg-icon-2
+				.col-sm-6.col-lg-3
+					+box-icon-modern({
+						title: 'Genoise Cake',
+						icon: 'linearicons-lollipop',
+						text: 'Eu sem integer vitae justo eget magna. Pharetra magna ac placerat vestibulum lectus.'
+					})
+						+svg-icon-3
+				.col-sm-6.col-lg-3
+					+box-icon-modern({
+						title: 'Lemon Cupcake',
+						icon: 'linearicons-ice-cream',
+						text: 'Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Leo a diam sollicitudin'
+					})
+						+svg-icon-4
+	='\n'
+
+	// Icons 2
+	section.section.section-sm.bg-default
+		.container
+			h2.fw-regular #2
+			.row.row-30
+				.col-sm-6.col-lg-4
+					+box-icon-creative({
+						unit: 'flex-column flex-md-row flex-lg-column flex-xl-row align-items-md-center align-items-lg-start align-items-xl-center',
+						icon: 'fl-bigmug-line-big104',
+						title: 'Sponge Cake',
+						text: 'Adipiscing elit pellentesque'
+					})
+
+				.col-sm-6.col-lg-4
+					+box-icon-creative({
+						unit: 'flex-column flex-md-row flex-lg-column flex-xl-row align-items-md-center align-items-lg-start align-items-xl-center',
+						icon: 'fl-bigmug-line-chat55',
+						title: 'Angel Food Cake',
+						text: 'Auctor augue mauris augue'
+					})
+
+				.col-sm-6.col-lg-4
+					+box-icon-creative({
+						unit: 'flex-column flex-md-row flex-lg-column flex-xl-row align-items-md-center align-items-lg-start align-items-xl-center',
+						icon: 'fl-bigmug-line-like51',
+						title: 'Genoise Cake',
+						text: 'Pulvinar mattis nunc sed'
+					})
+	='\n'
+
+	// Icons 3
+	section.section.section-sm.section-last.bg-default
+		.container
+			h2.fw-regular #3
+			.row.row-30
+				.col-sm-6.col-md-4
+					+box-icon-classic({
+						mod: 'text-sm-start',
+						unit: 'flex-column flex-sm-row flex-md-column flex-xl-row',
+						title: 'Sponge Cake',
+						icon: 'linearicons-candy'
+					})
+
+				.col-sm-6.col-md-4
+					+box-icon-classic({
+						mod: 'text-sm-start',
+						unit: 'flex-column flex-sm-row flex-md-column flex-xl-row',
+						title: 'Angel Food Cake',
+						icon: 'linearicons-ice-cream2'
+					})
+						+svg-icon-7
+
+				.col-sm-6.col-md-4
+					+box-icon-classic({
+						mod: 'text-sm-start',
+						unit: 'flex-column flex-sm-row flex-md-column flex-xl-row',
+						title: 'Genoise Cake',
+						icon: 'linearicons-lollipop'
+					})
+						+svg-icon-8
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

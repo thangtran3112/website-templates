@@ -1,0 +1,53 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+block variables
+	- var activeCategory = 'elements'
+	- var pageName = 'Calls to action'
+
+block page  
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Calls to action
+	section.section.section-xl.bg-brown-1
+		.container
+			h3.text-spacing-100 Summer
+				=' '
+				span.fw-light sale
+			h6.fw-light Tortor at auctor urna nunc id cursus tellus rutrum tellus pellentesque.
+			a.button.button-lg.button-shadow-2.button-primary.button-zakaria( href='#' ) Shop Now
+	='\n'
+
+	// Calls to action
+	section.section.section-xl.bg-gray-3.text-md-start
+		.container: .row.row-30.align-items-center.justify-content-md-between
+			.col-md-6.col-lg-8
+				h3.text-spacing-100 Summer
+					=' '
+					span.fw-light sale
+				h6.fw-light Eget lorem dolor sed viverra ipsum nunc. Cursus tempus imperdiet.
+			.col-md-auto
+				a.button.button-lg.button-shadow-2.button-primary.button-zakaria( href='#' ) Shop Now
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

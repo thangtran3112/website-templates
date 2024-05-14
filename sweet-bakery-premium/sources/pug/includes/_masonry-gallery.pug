@@ -1,0 +1,70 @@
+.isotope-wrap
+	.isotope-filters
+		//- Isotope Filters
+		button.isotope-filters-toggle.button.button-sm.button-icon.button-icon-right.button-default-outline(data-custom-toggle='.isotope-filters-list', data-custom-toggle-hide-on-blur='true')
+			span.icon.mdi.mdi-chevron-down
+			| Filter
+
+		.isotope-filters-list-wrap
+			ul.isotope-filters-list
+				li: a.active(href='#', data-isotope-filter='*') All Categories
+				li: a(href='#', data-isotope-filter='Type 1') Cakes
+				li: a(href='#', data-isotope-filter='Type 2') Cupcakes
+
+	.row.row-30.isotope.isotope-custom-1(data-lightgallery='group')
+		.col-sm-6.col-lg-4.col-xl-3.isotope-item(data-filter='Type 1')
+			+thumbnail-classic({
+				img: 'masonry-gallery-7-270x250',
+				imgOriginal: 'grid-gallery-8-original',
+				title: 'Sponge Cake',
+				price: '12'
+			})
+
+		.col-sm-6.col-lg-4.col-xl-3.isotope-item(data-filter='Type 1')
+			+thumbnail-classic({
+				img: 'masonry-gallery-3-270x530',
+				imgOriginal: 'grid-gallery-5-original',
+				title: 'Angel Food Cake',
+				price: '13'
+			})
+
+		.col-sm-6.col-lg-4.col-xl-3.isotope-item(data-filter='Type 2')
+			+thumbnail-classic({
+				img: 'masonry-gallery-4-270x250',
+				imgOriginal: 'grid-gallery-3-original',
+				title: 'Strawberry Cupcake',
+				price: '10'
+			})
+
+		.col-sm-6.col-lg-4.col-xl-3.isotope-item(data-filter='Type 2')
+			+thumbnail-classic({
+				img: 'masonry-gallery-6-270x250',
+				imgOriginal: 'grid-gallery-4-original',
+				title: 'Lemon Cupcake',
+				price: '8'
+			})
+
+		.col-sm-6.col-lg-4.col-xl-3.isotope-item(data-filter='Type 1')
+			+thumbnail-classic({
+				img: 'masonry-gallery-5-270x250',
+				imgOriginal: 'grid-gallery-7-original',
+				title: 'Genoise Cake',
+				price: '14'
+			})
+
+		.col-sm-6.col-lg-4.col-xl-6.isotope-item(data-filter='Type 2')
+			+thumbnail-classic({
+				img: 'masonry-gallery-1-570x530',
+				imgOriginal: 'grid-gallery-1-original',
+				title: 'Champagne Cupcake',
+				price: '16'
+			})
+
+		.col-sm-6.col-lg-8.col-xl-6.isotope-item(data-filter='Type 1')
+			+thumbnail-classic({
+				img: 'masonry-gallery-2-570x250',
+				imgOriginal: 'grid-gallery-2-original',
+				title: 'Oranges & Pineapples',
+				price: '10'
+			})
+		.col-1

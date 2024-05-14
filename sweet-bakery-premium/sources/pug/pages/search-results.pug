@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+block variables
+	- var activeCategory = 'elements'
+	- var pageName = 'Search Results'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Search results
+	section.section.section-xl.bg-default
+		.container: .row.justify-content-center: .col-lg-10.col-xl-9
+			// RD Search
+			form.rd-form.rd-search.rd-form-inline( action='search-results.html' method='GET' )
+				.form-wrap
+					label.form-label( for='rd-search-form-input' ) Search
+					input.form-input( id='rd-search-form-input' type='text' name='s' autocomplete='off' )
+				.form-button
+					button.button.button-primary( type='submit' ) Search
+
+			.rd-search-results
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

@@ -1,0 +1,145 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-posts
+include ../components/_ui-quote
+include ../components/_ui-box-comment
+include ../sections/_header-modern
+include ../sections/_footer-modern
+
+block variables
+	- var activeCategory = 'blog'
+	- var pageName = 'Blog Post'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Section Shop
+	section.section.section-xl.bg-default.text-md-start
+		.container: .row.row-50.row-md-60
+			.col-lg-8.col-xl-9: .inset-xl-right-100
+				.row.row-50.row-md-60.row-lg-80
+					.col-12
+						article.post.post-modern.box-xxl
+							.post-modern-panel
+								div: a.post-modern-tag( href='#' ) News
+								div: time.post-modern-time(datetime='2023-09-08') August 9, 2023
+							h3.post-modern-title How to Pipe a Fluffy Frosting Border on a Cake
+							.post-modern-figure: +jpg('post-7-800x394')
+							p.post-modern-text Facilisis mauris sit amet massa. Id faucibus nisl tincidunt eget nullam. Mus mauris vitae ultricies leo integer malesuada. Aliquam sem fringilla ut morbi tincidunt augue interdum. Sagittis orci a scelerisque purus semper eget duis at.
+							p.post-modern-text Bibendum at varius vel pharetra vel. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Aliquet nec ullamcorper sit amet. Eu sem integer vitae justo eget magna fermentum. Vitae ultricies leo integer malesuada nunc. Etiam sit amet nisl purus in mollis.
+						+quote-classic({
+							mod: 'quote-classic-2',
+							text: 'Ornare aenean euismod elementum nisi. Ut placerat orci nulla pellentesque dignissim enim.'
+						})
+
+						p Aliquam faucibus purus in massa tempor nec feugiat. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Massa sed elementum tempus egestas sed sed risus pretium quam. Vitae nunc sed velit dignissim sodales ut eu sem. Nisl tincidunt eget nullam non nisi est sit. Aliquam vestibulum morbi blandit cursus.
+
+						.single-post-bottom-panel
+							.group-sm.group-justify
+								div: .group-sm.group-tags
+									a.link-tag( href='#' ) News
+									a.link-tag( href='#' ) Tips
+									a.link-tag( href='#' ) Blog
+								div: .group-xs.group-middle
+									span.list-social-title Share
+									div: +widget-list([], '', 'list-social list-inline-sm')
+
+					.col-12
+						h6.single-post-title Related Posts
+						.row.row-30
+							.col-sm-6
+								+post-classic({
+									img: 'post-1-370x239',
+									time: {
+										datetime: '2023-09-08',
+										dateText: 'August 9, 2023'
+									},
+									title: 'Recipe of the Day: Pumpkin Spice Latte Cake',
+									text: 'Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt.'
+								})
+							.col-sm-6
+								+post-classic({
+									img: 'post-2-370x239',
+									time: {
+										datetime: '2023-09-08',
+										dateText: 'August 9, 2023'
+									},
+									title: 'Top 5 Tips from Pros for Successful Cake Baking',
+									text: 'Nisl purus in mollis nunc sed id semper risus in. Vulputate mi sit amet mauris.'
+								})
+
+					.col-12
+						h6.single-post-title 3 Comments
+						+box-comment({
+							unit: 'unit-spacing-md',
+							img: 'user-1-119x119',
+							author: 'Jane Doe',
+							text: 'Facilisis mauris sit amet massa. Id faucibus nisl tincidunt eget nullam. Mus mauris vitae ultricies leo integer malesuada. Aliquam sem fringilla ut morbi tincidunt augue interdum. Sagittis orci a scelerisque purus semper eget duis at.',
+							time: {
+								datetime: '2023-08-30',
+								dateText: 'Aug 30, 2023'
+							}
+						})
+
+							+box-comment({
+								unit: 'unit-spacing-md',
+								img: 'user-2-119x119',
+								author: 'Jessica Brown',
+								text: 'Bibendum at varius vel pharetra vel. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Aliquet nec ullamcorper sit amet. Eu sem integer vitae justo eget magna fermentum. Vitae ultricies leo integer malesuada nunc. Etiam sit amet nisl purus in mollis.',
+								time: {
+									datetime: '2023-08-30',
+									dateText: 'Aug 30, 2023'
+								}
+							})
+
+						+box-comment({
+							unit: 'unit-spacing-md',
+							img: 'user-3-119x119',
+							author: 'Nickie Stevens',
+							text: 'Aliquam faucibus purus in massa tempor nec feugiat. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Massa sed elementum tempus egestas sed sed risus pretium quam.',
+							time: {
+								datetime: '2023-08-30',
+								dateText: 'Aug 30, 2023'
+							}
+						})
+
+					.col-12
+						h6.single-post-title Leave a comment
+						form.rd-form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.row.row-20.row-md-30
+								.col-sm-6: .form-wrap
+									input#contact-first-name-2.form-input(type='text' name='name' data-constraints='@Required')
+									label.form-label(for='contact-first-name-2') First Name
+
+								.col-sm-6: .form-wrap
+									input#contact-last-name-2.form-input(type='text' name='name' data-constraints='@Required')
+									label.form-label(for='contact-last-name-2') Last Name
+
+								.col-12: .form-wrap
+									label.form-label(for='contact-message-2') Message
+									textarea#contact-message-2.form-input.textarea-lg(name='phone' data-constraints='@Required')
+
+							button.button.button-lg.button-secondary.button-zakaria(type='submit') Submit
+
+			.col-lg-4.col-xl-3: include ../includes/_aside-blog
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})

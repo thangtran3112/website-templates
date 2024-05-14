@@ -1,0 +1,123 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-product
+include ../components/_ui-pagination
+include ../components/_ui-box-comment
+include ../includes/_contact-form
+include ../sections/_header-modern
+include ../sections/_footer-modern
+block variables
+	- var activeCategory = 'shop'
+	- var pageName = 'Single Product'
+
+block page 
+	// Page Header
+	+header-modern
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'breadcrumbs-bg'
+	})
+
+	// Single Product
+	section.section.section-sm.section-first.bg-default
+		.container
+			.row.row-30
+				.col-lg-6
+					.slick-vertical.slick-product
+						// Slick Carousel
+						#carousel-parent.slick-slider.carousel-parent( data-items='1' data-swipe='true' data-child='#child-carousel' data-for='#child-carousel' )
+							.item: .slick-product-figure: +png('single-product-1-530x480')
+							.item: .slick-product-figure: +png('single-product-2-530x480')
+							.item: .slick-product-figure: +png('single-product-3-530x480')
+
+						#child-carousel.slick-slider.child-carousel.slick-nav-1( data-arrows='true' data-items='3' data-sm-items='3' data-md-items='3' data-lg-items='3' data-xl-items='3' data-xxl-items='3' data-md-vertical='true' data-for='#carousel-parent' )
+							.item: .slick-product-figure: +png('single-product-1-530x480')
+							.item: .slick-product-figure: +png('single-product-2-530x480')
+							.item: .slick-product-figure: +png('single-product-3-530x480')
+
+				.col-lg-6
+					.single-product
+						h3.text-transform-none.fw-medium Chocolate Truffles
+						.group-md.group-middle
+							.single-product-price $23
+							.single-product-rating
+								span.icon.mdi.mdi-star
+								span.icon.mdi.mdi-star
+								span.icon.mdi.mdi-star
+								span.icon.mdi.mdi-star
+								span.icon.mdi.mdi-star-half
+						p Lorem ipsum dolor sit amet, ei impetus epicurei his, ne falli erant consequuntur est. Mei simul aperiam eu, an rebum regione ponderum mel. Facer placerat ut duo, id duis solum maiorum vis, vim autemsemper docendi cu. Pro
+						hr.hr-gray-100
+						ul.list.list-description
+							li
+								span Categories:
+								span Sweets
+							li
+								span Weight:
+								span 7,25 oz
+							li
+								span Box:
+								span 60 x 60 x 90 cm
+						.group-xs.group-middle
+							div.product-stepper: input.form-input(type="number" data-zeros="true" value="1" min="1" max="1000")
+							div: a.button.button-lg.button-secondary.button-zakaria(href='cart-page.html') Add to cart
+						hr.hr-gray-100
+						.group-xs.group-middle
+							span.list-social-title Share
+							div: +widget-list([], '', 'list-social list-inline-sm')
+				.col-12
+					+contact-form-2({ buttonText: 'Submit' })
+
+
+	// Related Products
+	section.section.section-sm.section-last.bg-default
+		.container
+			h4.fw-sbold Featured Products
+			.row.row-lg.row-30.row-lg-50.justify-content-center
+				.col-sm-6.col-md-5.col-lg-3
+					+product({
+						img: 'product-1-152x160',
+						title: 'Chocolate Truffles',
+						price: '23',
+						priceOld: '30'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+product({
+						img: 'product-2-157x127',
+						title: 'Chocolate Pudding',
+						price: '25'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+product({
+						img: 'product-3-179x114',
+						title: 'Dark Chocolate Cake',
+						price: '15',
+						new: true
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+product({
+						img: 'product-4-215x112',
+						title: 'Chocolate Cookies',
+						price: '12'
+					})
+
+
+
+
+
+	='\n'
+
+	// Page Footer
+	+footer-modern({
+		gallery: [
+			{img: 'grid-gallery-1-130x130', imgOriginal: 'grid-gallery-1-original'},
+			{img: 'grid-gallery-2-130x130', imgOriginal: 'grid-gallery-2-original'},
+			{img: 'grid-gallery-3-130x130', imgOriginal: 'grid-gallery-3-original'},
+			{img: 'grid-gallery-4-130x130', imgOriginal: 'grid-gallery-4-original'},
+			{img: 'grid-gallery-5-130x130', imgOriginal: 'grid-gallery-5-original'},
+			{img: 'grid-gallery-6-130x130', imgOriginal: 'grid-gallery-6-original'}
+		]
+	})
