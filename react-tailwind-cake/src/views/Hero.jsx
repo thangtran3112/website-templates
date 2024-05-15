@@ -35,10 +35,10 @@ export const Hero = () => {
               </SwiperSlide>
             ))}
 
-            <div className="button-prev absolute -left-16 z-20 flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-full bg-primary-300 text-white transition-all duration-300 hover:bg-primary-500 group-hover:left-4">
+            <div className="button-prev absolute -left-16 z-20 flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-full bg-primary-400 text-white transition-all duration-300 hover:bg-primary-500 group-hover:left-4">
               &#10094;
             </div>
-            <div className="button-next absolute -right-16 z-20 flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-full bg-primary-300 text-white transition-all duration-300 hover:bg-primary-500 group-hover:right-4">
+            <div className="button-next absolute -right-16 z-20 flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-full bg-primary-400 text-white transition-all duration-300 hover:bg-primary-500 group-hover:right-4">
               &#10095;
             </div>
           </Swiper>
