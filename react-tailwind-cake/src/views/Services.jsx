@@ -7,7 +7,7 @@ export const Services = () => {
     <section className="container mx-auto px-4 py-5 xs:px-8" id="services">
       <div className="mb-10 flex items-center before:my-auto before:h-[2px] before:w-full before:bg-gray-200 before:content-[''] after:my-auto after:h-[2px] after:w-full after:bg-gray-200 after:content-['']">
         <motion.h1
-          className="mx-2 whitespace-nowrap text-center font-lobster text-4xl text-primary-300"
+          className="mx-2 whitespace-nowrap text-center font-lobster text-4xl text-primary-400"
           initial="initial"
           whileInView="animate"
           variants={fadeUp}
@@ -27,7 +27,7 @@ export const Services = () => {
             once: true,
           }}
         >
-          <span className="font-lobster text-2xl text-primary-300">
+          <span className="font-lobster text-2xl text-primary-400">
             Products
           </span>
           <ul>
@@ -37,7 +37,7 @@ export const Services = () => {
                 key={index}
               >
                 <span>{title}</span>
-                <span className="font-light text-primary-300">${price}</span>
+                <span className="font-light text-primary-400">${price}</span>
               </li>
             ))}
           </ul>
@@ -50,7 +50,7 @@ export const Services = () => {
             once: true,
           }}
         >
-          <span className="font-lobster text-2xl text-primary-300">Promos</span>
+          <span className="font-lobster text-2xl text-primary-400">Promos</span>
           <ul>
             {promos.map(({ title }, index) => (
               <li className="border-b border-gray-200 py-2" key={index}>

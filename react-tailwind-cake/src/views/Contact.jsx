@@ -38,7 +38,7 @@ export const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-        },
+        }
       );
   };
 
@@ -74,7 +74,7 @@ export const Contact = () => {
               once: true,
             }}
           >
-            <h1 className="mb-5 block text-center font-lobster text-4xl text-primary-300">
+            <h1 className="mb-5 block text-center font-lobster text-4xl text-primary-400">
               Contact
             </h1>
             <form
@@ -83,25 +83,25 @@ export const Contact = () => {
               onSubmit={sendEmail}
             >
               <input
-                className="rounded-lg border-2 border-slate-200 pl-2 outline-none transition-all duration-300 focus:border-primary-300 focus:ring-0"
+                className="rounded-lg border-2 border-slate-200 pl-2 outline-none transition-all duration-300 focus:border-primary-500 focus:ring-0"
                 type="text"
                 name="user_name"
                 placeholder="Your Name"
               />
               <input
-                className="rounded-lg border-2 border-slate-200 pl-2 outline-none transition-all duration-300 focus:border-primary-300 focus:ring-0"
+                className="rounded-lg border-2 border-slate-200 pl-2 outline-none transition-all duration-300 focus:border-primary-500 focus:ring-0"
                 type="email"
                 name="user_email"
                 placeholder="Your e-mail"
               />
               <textarea
-                className="resize-none rounded-lg border-2 border-slate-200 pl-2 outline-none transition-all duration-300 focus:border-primary-300 focus:ring-0"
+                className="resize-none rounded-lg border-2 border-slate-200 pl-2 outline-none transition-all duration-300 focus:border-primary-500 focus:ring-0"
                 rows="5"
                 name="message"
                 placeholder="Write your message here..."
               ></textarea>
               <input
-                className="w-max cursor-pointer rounded-lg bg-primary-300 px-3 py-2 font-semibold text-white transition-all duration-300 hover:bg-primary-400"
+                className="w-max cursor-pointer rounded-lg bg-primary-300 px-3 py-2 font-semibold text-white transition-all duration-300 hover:bg-primary-500"
                 type="submit"
                 id="button"
                 value="Send Message"

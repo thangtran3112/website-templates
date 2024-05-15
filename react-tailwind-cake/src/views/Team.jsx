@@ -15,7 +15,7 @@ export const Team = () => {
           once: true,
         }}
       >
-        <h1 className="mx-2 whitespace-nowrap text-center font-lobster text-4xl text-primary-300">
+        <h1 className="mx-2 whitespace-nowrap text-center font-lobster text-4xl text-primary-400">
           The Team
         </h1>
       </motion.div>

@@ -30,7 +30,7 @@ export const Card = ({
         >
           {title}
         </a>
-        <span className="mt-auto text-xl font-medium text-primary-300">
+        <span className="mt-auto text-xl font-medium text-primary-400">
           ${price}
         </span>
       </div>

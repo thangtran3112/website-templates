@@ -7,7 +7,7 @@ export const Review = ({ name, text, description, image, rate }) => {
       <Rater interactive={false} total={5} rating={rate} />
       <p className="my-6">{text}</p>
       <div className="flex gap-5">
-        <figure className="h-[80px] w-[80px] overflow-hidden rounded-full border-[3px] border-primary-300 lg:h-[100px] lg:w-[100px]">
+        <figure className="h-[80px] w-[80px] overflow-hidden rounded-full border-[3px] border-primary-500 lg:h-[100px] lg:w-[100px]">
           <img className="h-full w-full object-cover" src={image} alt={name} />
         </figure>
         <div className="self-center">

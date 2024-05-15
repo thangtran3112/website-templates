@@ -24,29 +24,29 @@ export const TeamMember = ({
       custom={index}
     >
       <div className="flex h-full flex-col items-center rounded-lg bg-white p-5 shadow-lg transition-all  duration-300 hover:shadow-primary-300">
-        <figure className="h-[200px] w-[200px] overflow-hidden rounded-full border-[5px] border-primary-300">
+        <figure className="h-[200px] w-[200px] overflow-hidden rounded-full border-[5px] border-primary-400">
           <img className="h-full w-full object-cover" src={image} alt={name} />
         </figure>
         <h2 className="my-5 text-2xl font-bold text-shuttle-gray-900">
           {name}
         </h2>
         <em className="my-5 text-shuttle-gray-400">{role}</em>
-        <p className="mt-auto font-bold text-primary-300">{description}</p>
+        <p className="mt-auto font-bold text-primary-400">{description}</p>
         <div className="my-5 flex items-center gap-4">
           <a
-            className="transition-all duration-300 hover:text-primary-300"
+            className="transition-all duration-300 hover:text-primary-400"
             href={facebook}
           >
             <BsFacebook className="h-5 w-5" />
           </a>
           <a
-            className="transition-all duration-300 hover:text-primary-300"
+            className="transition-all duration-300 hover:text-primary-400"
             href={instagram}
           >
             <BsInstagram className="h-5 w-5" />
           </a>
           <a
-            className="transition-all duration-300 hover:text-primary-300"
+            className="transition-all duration-300 hover:text-primary-400"
             href={twitter}
           >
             <BsTwitterX className="h-5 w-5" />

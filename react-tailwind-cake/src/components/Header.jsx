@@ -133,26 +133,26 @@ export const Header = ({ onToggleMenu }) => {
         </nav>
         <div className="hidden items-center gap-5 lg:flex">
           <a
-            className="text-slate-500 transition-all duration-300 hover:text-primary-300"
+            className="text-slate-500 transition-all duration-300 hover:text-primary-400"
             href="#"
           >
             <BsFacebook className="text-lg" />
           </a>
           <a
-            className="text-slate-500 transition-all duration-300 hover:text-primary-300"
+            className="text-slate-500 transition-all duration-300 hover:text-primary-400"
             href="#"
           >
             <BsTwitterX className="text-lg" />
           </a>
           <a
-            className="text-slate-500 transition-all duration-300 hover:text-primary-300"
+            className="text-slate-500 transition-all duration-300 hover:text-primary-400"
             href="#"
           >
             <BsInstagram className="text-lg" />
           </a>
         </div>
         <button
-          className="cursor-pointer hover:text-primary-300 lg:hidden"
+          className="cursor-pointer hover:text-primary-400 lg:hidden"
           onClick={onToggleMenu}
         >
           <BsList className="text-3xl" />
