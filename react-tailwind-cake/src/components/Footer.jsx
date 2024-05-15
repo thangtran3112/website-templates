@@ -19,25 +19,25 @@ export const Footer = () => {
           </figure>
           <ul>
             <li className="flex items-center gap-[10px] py-2">
-              <BsEnvelope className="text-primary-300 text-2xl" />
+              <BsEnvelope className="text-primary-400 text-2xl" />
               <a className="break-all" href="#">
                 dulzura@example.com
               </a>
             </li>
             <li className="flex items-center gap-[10px] py-2">
-              <BsTelephone className="text-primary-300 text-2xl" />
+              <BsTelephone className="text-primary-400 text-2xl" />
               <a className="break-all" href="#">
                 (+54) 2284 - 123456789
               </a>
             </li>
             <li className="flex items-center gap-[10px] py-2">
-              <BsGeoAlt className="text-primary-300 text-2xl" />
+              <BsGeoAlt className="text-primary-400 text-2xl" />
               <p className="break-all">Colón 1234, Olavarría</p>
             </li>
           </ul>
         </div>
         <div className="col-span-12 py-5 sm:col-span-6 sm:py-0 lg:col-span-4">
-          <span className="text-primary-300 mb-5 block font-lobster text-xl">
+          <span className="text-primary-400 mb-5 block font-lobster text-xl">
             Opening Hours
           </span>
           <div className="flex flex-col gap-5">
@@ -55,18 +55,18 @@ export const Footer = () => {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-4">
-          <span className="text-primary-300 mb-5 block font-lobster text-xl">
+          <span className="text-primary-400 mb-5 block font-lobster text-xl">
             Newsletter
           </span>
           <form>
             <div className="flex">
               <input
-                className="focus:border-primary-300 w-full rounded-l-lg border-2 border-r-0 border-slate-200 pl-2 outline-none transition-all duration-300 focus:ring-0"
+                className="focus:border-primary-500 w-full rounded-l-lg border-2 border-r-0 border-slate-200 pl-2 outline-none transition-all duration-300 focus:ring-0"
                 type="text"
                 placeholder="Your email address"
               />
               <button
-                className="bg-primary-300 hover:bg-primary-400 rounded-r-lg p-1 px-2 font-medium text-white transition-all duration-300"
+                className="bg-primary-300 hover:bg-primary-500 rounded-r-lg p-1 px-2 font-medium text-white transition-all duration-300"
                 type="submit"
               >
                 <span>Suscribe</span>

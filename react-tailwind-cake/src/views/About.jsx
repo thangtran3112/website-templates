@@ -12,7 +12,7 @@ export const About = () => {
         className="relative py-10 after:absolute after:inset-0 after:h-full after:w-full after:bg-black/40"
         id="about"
       >
-        <h1 className="relative z-[1] text-center font-lobster text-4xl text-primary-300">
+        <h1 className="relative z-[1] text-center font-lobster text-4xl text-primary-400">
           About us
         </h1>
         <div className="container relative z-[1] mx-auto flex flex-wrap px-4 py-5 xs:px-8">

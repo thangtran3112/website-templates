@@ -51,7 +51,7 @@ export const Products = () => {
           once: true,
         }}
       >
-        <h1 className="mx-2 whitespace-nowrap text-center font-lobster text-4xl text-primary-300">
+        <h1 className="mx-2 whitespace-nowrap text-center font-lobster text-4xl text-primary-400">
           Products
         </h1>
       </motion.div>
